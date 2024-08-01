@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatterUp</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="namePrompt" style="display: block;">
+        <h1>Welcome to ChatterUp</h1>
+        <input type="text" id="userNameInput" placeholder="Enter your name...">
+        <button onclick="setUserName()">Start Chat</button>
+    </div>
+    <div id="app" style="display: none;">
+        <!-- Chat UI components -->
+        <div id="chat">
+            <div id="messages">
+                <!-- Display chat messages here -->
+            </div>
+            <input type="text" id="messageInput" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+        <div id="notificationPanel">
+            <!-- Display online users here -->
+        </div>
+    </div>
+
+    <!-- Socket.IO library -->
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <!-- JavaScript files -->
+    <script src="js/app.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/message.js"></script>
+    <script src="js/notification.js"></script>
+    <script src="js/userOnboarding.js"></script>
+</body>
+</html>
